@@ -1,0 +1,16 @@
+<% if(result.mb)
+{
+    for(var i=0 ; i< result.mb.length ; i++)
+    {
+ %>
+    <div class="join_feed" ref="<%=result.mb[i].id%>">
+        <img data-source="<%=result.mb[i].h%>" placeholder="images/head/default.jpg" alt="头像">
+        <div class="join_info">
+            <p class="txt_name"><%=result.mb[i].n%></p>
+            <p class="txt_join">参与<em><%=result.mb[i].a%></em>次</p>
+            <p class="txt_ps"><%=result.mb[i].t%></p>
+        </div>
+    </div>
+    <%
+    }
+}%>

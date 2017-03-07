@@ -1,0 +1,50 @@
+<!--详细页BEGIN-->
+<section id="sec_product_detail" data-role="section">
+    <header>
+        <div class="titlebar">
+            <a class="left" data-toggle="back" href="javascript:app_goHome()">
+                <i class="icon icon-arrowleft"></i><span>返回</span>
+            </a>
+            <h1 class="text-center" id="#sec_product_detail_name">&nbsp;</h1>
+            <a href="javascript:app_showTarget('oneShareBox');" class="home"></a>
+        </div>
+    </header>
+    <article data-role="article" id="sec_product_detail_art" class="active" data-scroll="pulldown" style="top: 44px; bottom: 0px;">
+  
+        <div class="wrap_fixed scroller">
+            <div class="">
+                <div class="goods_detail_sec pad_bot ">
+                    <!--
+                    <script type="text/html" src="page/part/template_detail_timebox.html" id="template_detail_timebox"></script>
+                   -->
+
+                    <script type="text/html" src="page/part/template_detail_main.html" id="template_detail_main"></script>
+
+
+                    <script type="text/html" src="page/part/template_detail_winner.html" id="template_detail_winner"></script>
+
+                   
+                        <div class="join_box" id="div_detail_product_members">
+                            <div class="join_tt">
+                                <p class="txt_tt">所有参与记录</p>
+                            </div>
+
+                            <script type="text/html" src="page/part/template_detail_member.html" id="template_detail_member"></script>
+
+
+                        </div>
+                    
+
+                    <script type="text/html" src="page/part/template_empty.html" id="template_detail_member_empty"></script>
+                </div>
+            </div>
+
+        </div>
+        <div class="buy_box" id="sec_detail_buy_btn">
+            <a href="javascript:app_showTarget('detail_buy');" class="btn_duo" cartaction="add" id="detailBuyBtn">立即夺宝</a>
+        </div>
+ 
+
+    </article>
+</section>
+<!--详细页End-->

@@ -1,0 +1,31 @@
+<%if(result){
+    for(var i=0; i< result.length ; i++)
+    {
+    %>
+    <li>
+        <table style="width:100%;border-width:0px">
+            <tr style="border-width:0px">
+                <td style="align:left;border-width:0px;padding:5px 4px">
+                    <%=result[i].name%>
+                </td>
+                <td style="text-align:right;border-width:0px;padding:5px 4px">
+                    <%=result[i].contract%>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="word-break:normal;border-width:1 0 0 0px;padding:5px 4px">
+                    <%=result[i].address%>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align:right;border-width:0px;padding:5px 4px">
+                    <a href="javascript:app_selectAddress(<%=result[i].id%>)"><i class="icon icon-hook"></i>选择此收货地址</a>
+                </td>
+            </tr>
+        </table>
+    </li>
+    <%
+    }
+    }
+ %>

@@ -1,0 +1,31 @@
+<!--消息列表BEGIN-->
+<section id="sec_center_address" data-role="section">
+    <header>
+        <div class="titlebar">
+            <a class="left" data-toggle="back" href="#">
+                <i class="icon icon-arrowleft"></i><span>返回</span>
+            </a>
+            <h1 class="text-center">收货地址</h1>
+        </div>
+    </header>
+    <article data-role="article" class="active" id="sec_center_address_art" data-scroll="pulldown" style="top: 44px; bottom: 10px;">
+
+        <div class="scroller">
+            <script type="text/html" src="page/part/template_empty.html" id="template_sec_center_address_empty"></script>
+
+
+            <div class="address_list">
+                <ul class="clearfix">
+                    <script type="text/html" src="page/part/template_center_address.html" id="template_sec_center_address"></script>
+                </ul>
+            </div>
+
+            <div class="recieve_sec" id="sec_center_address_addbtn" style="position:absolute;bottom:0px;width:100%;display:none">
+                <a class="btn_save margin-top" href="page/sec/sec_center_address_edit.html" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);"
+                    onclick="javascript:return app_checkaddress()" data-toggle="section">新 增 地 址</a>
+            </div>
+
+        </div>
+    </article>
+</section>
+<!--消息列表End-->

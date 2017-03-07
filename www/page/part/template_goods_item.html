@@ -1,0 +1,17 @@
+<div class="img_box">
+    <a href="page/sec/sec_product_detail.html?gno=<%=gameno%>&pid=<%=productid%>" data-toggle="section">
+    <img data-source="<%=img%>"  placeholder="images/product/default.jpg"  data-img="<%=img%>" alt="<%=name%>"></a>
+</div>
+<h3>
+    <a href="page/sec/sec_product_detail.html?gno=<%=gameno%>&pid=<%=productid%>" data-toggle="section">
+        <%=name%>
+    </a>
+</h3>
+<div class="rate_box rate_278">
+    <div class="progress_bar"><span class="bar"  style="width:<%=cur/total*100%>%;"></span></div>
+    <div class="num_box">
+        <p class="item_num"><span class="txt_num"  ><%=total%></span>总需</p>
+        <p class="item_num"><span class="txt_num"  ><%=(total-cur)%></span>剩余</p>
+    </div>
+</div>
+<a href="javascript:app_buy('<%=gameno%>','<%=productid%>',<%=(total-cur)%>,'<%=img%>');" class="btn_buy btn_common"><span>夺宝</span></a>

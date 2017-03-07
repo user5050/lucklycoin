@@ -1,0 +1,20 @@
+<% for(var i=0; i< result.length;i++){%>
+    <div class="past_feed">
+        <div class="past_time">
+            <h3 class="clearfix"><span>第<%=result[i].gn%>期</span><span class="txt_time"> <%=result[i].t%> </span></h3>
+            <a href="page/sec/sec_product_detail.html?gno=<%=result[i].gn%>&pid=<%=result[i].pid%>" class="btn_arr"  data-toggle="section"></a>
+        </div>
+        <div class="join_feed">
+            <img data-source="<%=result[i].h%>"  placeholder="images/head/default.jpg" alt="头像">
+            <div class="join_info">
+                <p class="txt_join"><span>获奖者：</span><strong><%=result[i].n%></strong>
+                    <!--<a href="page/sec/sec_detail_joinlog.html?gno=<%=result[i].gn%>&uid=<%=result[i].id%>" class="btn_look"  data-toggle="section">我的号码</a>-->
+                </p>
+                <p class="txt_join"><span>幸运号码：</span><span><%=result[i].wn%></span></p>
+                <p class="txt_join"><span>本期参与：</span><span><%=result[i].a%>人次</span> 
+                    <a href="page/sec/sec_center_joinlog.html?gno=<%=result[i].gn%>&pn=&bcnt=<%=result[i].a%>&lno=<%=result[i].wn%>&uid=<%=result[i].id%>"  class="btn_look"  data-toggle="section">Ta的号码</a>
+                </p>
+            </div>
+        </div>
+    </div>
+<%}%>

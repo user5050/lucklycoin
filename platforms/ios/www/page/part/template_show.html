@@ -1,0 +1,31 @@
+<%for(var i=0 ; i< result.length; i++){%>
+    <div class="share_feed">
+        <div class="user_info">
+            <img data-source="<%=result[i].u.h%>"  placeholder="images/head/default.jpg" alt="头像">
+            <p class="user_name">
+                <%=result[i].u.n%>
+            </p>
+        </div>
+        <div class="share_info">
+            <p>
+                <%=result[i].u.t%>
+            </p>
+
+            <p class="txt_share">
+                <%=result[i].c%>
+            </p>
+            <ul class="img_list clearfix img_gviewthum_t">
+
+                <%if(result[i].i){
+                    for(var j=0; j< result[i].i.length;j++){
+ 
+                    %>
+                    <li>
+                        <img src="<%=result[i].i[j]%>" alt="">
+                    </li>
+
+                    <%}}%>
+            </ul>
+        </div>
+    </div>
+    <%}%>

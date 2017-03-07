@@ -1,0 +1,66 @@
+<section id="sec_detail_compute" data-role="section" class="rule_sec">
+    <header>
+        <div class="titlebar">
+            <a class="left" data-toggle="back" href="#">
+                <i class="icon icon-arrowleft"></i><span>返回</span>
+            </a>
+            <h1 class="text-center" id="sec_detail_compute_title"></h1>
+        </div>
+    </header>
+    <article data-role="article" class="active" style="top: 44px; bottom: 0px;">
+        <div class="wrap_fixed">
+            <div class="rule_box">
+                <h6>商品名称</h6>
+                <div class="rule_cont">
+                    <ul>
+                        <li><span id="sec_detail_compute_productName"></span> </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rule_box">
+                <h6>商品期号</h6>
+                <div class="rule_cont">
+                    <ul>
+                        <li><span id="sec_detail_compute_gameNo"></span> </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rule_box">
+                <h6>开奖时间</h6>
+                <div class="rule_cont">
+                    <ul>
+                        <li><span id="sec_detail_compute_computeTime"></span> </li>
+                    <ul>
+                </div>
+            </div>
+
+            <div class="rule_box">
+                <h6>计算因素</h6>
+                <div class="rule_cont">
+                    <ul>
+                        <li><span id="sec_detail_compute_p"></span> </li>
+                        <li style="color:gray"><span id="sec_detail_compute_stockTime"></span><span>收盘价格</span></li>
+                    <ul>
+                </div>
+            </div>
+
+
+            <div class="rule_box">
+                <h6>幸运号码计算过程</h6>
+                <div class="rule_cont">
+                    <ul> 
+                        <li><span class="num">*</span> 算法: 取整(上证指数 * 股票1收盘价 *  股票2收盘价 * 股票3收盘价 * 100 ) % 总参与数  + 1000001
+                        </li>
+                        <li><span class="num">1.</span><span id="sec_detail_compute_setp1"></span> </li>
+                        <li><span class="num">2.</span><span id="sec_detail_compute_setp2"></span> </li>
+                        <li><span class="num">3.</span><span id="sec_detail_compute_setp3" style="color:red"></span> </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </article>
+</section>

@@ -1,0 +1,94 @@
+<%for(var i=0 ; i< result.length; i++){%>
+    <li>
+        <div class="img_box">
+            <a href="page/sec/sec_product_detail.html?gno=<%=result[i].gameno%>&pid=<%=result[i].productid%>" data-toggle="section">
+            <img placeholder="images/product/default.jpg" data-source="<%=result[i].img%>" alt="<%=result[i].name%>" />
+        </a>
+        </div>
+        <h3>
+            <a href="page/sec/sec_product_detail.html?gno=<%=result[i].gameno%>&pid=<%=result[i].productid%>" data-toggle="section">
+                <%=result[i].name%>
+            </a>
+        </h3>
+
+
+        <div class="rate_box wait">
+            <div>期号：
+                <%=result[i].gameno%>
+            </div>
+            <%if(result[i].state== 1){%>
+                <!--
+                <div class="rate_box">
+                    <div class="progress_bar"><span class="bar" style="width:<%=result[i].cur/result[i].total*100%>%;"></span></div>
+                    <div class="num_box">
+                        <p class="item_num"><span class="txt_num"><%=result[i].total%></span>总需</p>
+                        <p class="item_num"><span class="txt_num"><%=(result[i].total-result[i].cur)%></span>剩余</p>
+                    </div>
+                </div>
+-->
+                <div class="num_box">总需：
+                    <%=result[i].total%>
+                </div>
+
+                <div class="num_box">参与次数：
+                    <b style="padding-right:10px"><%=result[i].buytotalcnt%></b>
+                    <a href="page/sec/sec_center_joinlog.html?gno=<%=result[i].gameno%>&pn=<%=result[i].name%>&bcnt=<%=result[i].buytotalcnt%>" data-toggle="section">查看号码>></a>
+                </div>
+ 
+                <div class="define-top">
+                    
+                    <div class="wait_time">完成进度<b class="txt-red"></b></div>
+ 
+                    <div class="rate_box" style="width:100%;margin-left:0px">
+                            <div class="progress_bar" style="margin-top:10px;">
+                                <span class="bar" style="width:<%=result[i].cur/result[i].total*100%>%;"></span>
+                            </div>
+                        </div>
+
+                        <!--
+                    <div class="wait_stock">
+                        <b> 
+                            <a href="page/sec/sec_detail_compute.html?gno=<%=result[i].gameno%>&pid=<%=result[i].productid%>"  data-toggle="section"><%for(var j=0; j< result[i].stocks.length;j++){%> <%=result[i].stocks[j].n%> <%}%> >></a>
+                        </b>
+                    </div>-->
+                </div>
+ 
+               
+
+                <%}else if(result[i].state== 2){%>
+                    <div class="num_box">总需：
+                        <%=result[i].total%>
+                    </div>
+                    <div class="num_box">参与次数：
+                        <b style="padding-right:10px"><%=result[i].buytotalcnt%></b><a href="page/sec/sec_center_joinlog.html?gno=<%=result[i].gameno%>&pn=<%=result[i].name%>&bcnt=<%=result[i].buytotalcnt%>"
+                            data-toggle="section">查看号码>></a>
+                    </div>
+                    <div class="define-top">
+                        <div class="wait_time">开奖时间：<b class="txt-red"><%=result[i].computetime%></b></div>
+                        <div class="wait_stock">
+                            <b><a href="page/sec/sec_compute.html?gno=<%=result[i].gameno%>&pid=<%=result[i].productid%>"  data-toggle="section"><%for(var j=0; j< result[i].stocks.length;j++){%> <%=result[i].stocks[j].n%> <%}%> >></a></b>
+                        </div>
+                    </div>
+                    <%}else{%>
+
+                        <div class="num_box">总需：
+                            <%=result[i].total%>
+                        </div>
+                        <div class="num_box">参与次数：
+                            <b style="padding-right:10px"><%=result[i].buytotalcnt%></b><a href="page/sec/sec_center_joinlog.html?gno=<%=result[i].gameno%>&pn=<%=result[i].name%>&bcnt=<%=result[i].buytotalcnt%>" data-toggle="section">查看号码>></a>
+                        </div>
+                        <%if(result[i].winner){ %>
+                            <div class="define-top">
+                                <div class="wait_time">中奖者:<b class="txt-red"><%=result[i].winner.nickname%></b></div>
+                                <div class="wait_stock">
+                                    <b><a href="page/sec/sec_detail_compute.html?gno=<%=result[i].gameno%>&pid=<%=result[i].productid%>"  data-toggle="section">中奖号码：<%=result[i].winno%> >></a></b>
+                                </div>
+                            </div>
+                        <%}%>
+                <%}%>
+
+                  
+        </div>
+    </li>
+
+    <%}%>

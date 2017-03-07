@@ -1,0 +1,29 @@
+<%if(result){
+    for(var i=0; i< result.length ; i++)
+    {
+    %>
+    <li ref="address_<%=result[i].id%>" mode="user_address">
+
+        <table style="width:100%;border-width:0px">
+            <tr style="border-width:0px">
+                <td style="align:left;border-width:0px;padding:5px 4px"><%=result[i].name%></td>
+                <td style="text-align:right;border-width:0px;padding:5px 4px"><%=result[i].contract%></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="word-break:normal;border-width:1 0 0 0px;padding:5px 4px"><%=result[i].address%></td> 
+            </tr>
+
+            <tr> 
+                <td colspan="2" style="text-align:right;border-width:0px;padding:5px 4px">
+                    <a href="page/sec/sec_center_address_edit.html?id=<%=result[i].id%>" data-toggle="section"><i class="icon icon-write"></i>编辑</a>
+                    <a href="javascript:app_removeAddress(<%=result[i].id%>)" style="padding-left:15px;"><i class="icon icon-trash"></i>删除</a>
+                </td>
+            </tr>
+        </table>
+         
+    </li>
+    <%
+    }
+    }
+ %>
+ 

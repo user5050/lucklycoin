@@ -1,0 +1,61 @@
+<%for(var i=0 ; i< result.length; i++){%>
+    <li ref="li_center_win_<%=result[i].product.gameno%>">
+        <div class="img_box">
+            <a href="page/sec/sec_product_detail.html?gno=<%=result[i].product.gameno%>&pid=<%=result[i].product.productid%>"
+                data-toggle="section">
+            <img placeholder="images/product/default.jpg" data-source="<%=result[i].product.img%>" alt="<%=result[i].product.name%>" />
+        </a>
+        </div>
+        <h3>
+            <a href="page/sec/sec_product_detail.html?gno=<%=result[i].product.gameno%>&pid=<%=result[i].product.productid%>"
+                data-toggle="section">
+                <%=result[i].product.name%>
+            </a>
+        </h3>
+
+
+        <div class="rate_box wait" style="width:85%">
+            <div>期号：
+                <%=result[i].product.gameno%>
+            </div>
+
+            <div class="num_box">总需：
+                <%=result[i].product.total%> &nbsp;参与次数：
+                    <%=result[i].product.buytotalcnt%>
+            </div>
+
+            <div>幸运号码：<b class="txt-red"><%=result[i].winer.wn%></b>&nbsp;<a href="page/sec/sec_detail_compute.html?gno=<%=result[i].product.gameno%>"
+                    data-toggle="section" style="font-size:10px">详 情>></a></div>
+            <div>中奖时间：<b class="txt-red"><%=result[i].product.computetime%></b></div>
+
+
+            <%if(result[i].exress){%>
+                <%if(result[i].exress.state == 2){%>
+                    <%if( ! result[i].product.showid ){%>
+                        <div class="win_control win_contro_w">
+                            <b><a href="page/sec/sec_center_dogameshow.html?gno=<%=result[i].product.gameno%>&img=<%=result[i].product.img%>&name=<%=result[i].product.name%>" data-toggle="section">去晒单>></a></b>
+                        </div>
+                    <%}else{%>
+                        <div class="win_control win_contro_f">
+                            <b><a href="page/sec/sec_center_express.html?gno=<%=result[i].product.gameno%>" data-toggle="section">已完成>></a></b>
+                        </div>
+                    <%}
+                }else if(result[i].exress.state == 1){%>
+                    <div class="win_control win_contro_g">
+                        <b><a href="page/sec/sec_center_express.html?gno=<%=result[i].product.gameno%>" data-toggle="section">已发货，快递详情>></a></b>
+                    </div>
+                <%}else{%>
+                    <div  style="white-space:normal" >
+                        <b><a href="page/sec/sec_center_express.html?gno=<%=result[i].product.gameno%>" data-toggle="section">收货地址：<%=result[i].exress.name%> <%=result[i].exress.contract%> <%=result[i].exress.address%></a></b>
+                     </div> 
+                <%} 
+             }else{%>
+                    <div class="win_control win_contro_w">
+                        <b><a href="page/sec/sec_center_address_select.html?gno=<%=result[i].product.gameno%>" data-toggle="section">选择收货地址>></a></b>
+                    </div>
+            <%} %>
+
+        </div>
+    </li>
+
+    <%}%>

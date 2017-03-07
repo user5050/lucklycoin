@@ -1,0 +1,50 @@
+ <!--收货地址BEGIN-->
+        <section id="sec_center_address_edit" data-role="section">
+            <header>
+                <div class="titlebar">
+                    <a class="left"  data-toggle="back" href="#">
+                        <i class="icon icon-arrowleft"></i><span>返回</span>
+                    </a>
+                    <h1 class="text-center">编辑地址</h1>
+                     <a href="javascript:app_saveaddr();" id="btn_share" class="home">保存</a>
+                </div>
+                
+            </header>
+            <article data-role="article" class="active" style="top: 44px; bottom: 10px;">
+                <div class="wrap_fixed">
+                    <div class="recieve_sec">
+                        <div class="address_input" id="addressBar">
+                            <div class="input_box">
+                                <label>收货人：</label>
+                                <input type="text" placeholder="请输入收货人姓名" class="ipt" id="sec_center_address_name" length="16"  valtype="_reg_name">
+                                <input type="hidden" id="sec_center_address_id" name="sec_center_address_id"/>
+                            </div>
+                            <div class="input_box">
+                                <label>手机号码：</label>
+                                <input type="text" placeholder="请输入正确手机号码" class="ipt" id="sec_center_address_phone"  length="11"  valtype="_reg_mobile_length|_reg_mobile_format">
+                            </div>
+                            <div class="input_box">
+                                <label>QQ号码：</label>
+                                <input type="text" placeholder="请输入QQ号码" class="ipt" id="sec_center_address_qq"  length="15"  valtype="_reg_qq">
+                            </div>
+                            <div class="input_box">
+                                <label>邮政编码：</label>
+                                <input type="text" placeholder="请填写邮政编码" class="ipt" id="sec_center_address_zip" length="6"  valtype="_reg_zipcode">
+                            </div>
+                            
+                            <div class="input_box">
+                                <label>详细地址：</label>
+                                <input type="text" placeholder="请输入正确地址" class="ipt" id="sec_center_address_addr" length="68" valtype="_reg_address_length">
+                            </div>
+                            
+                        </div>
+
+                        <!--
+                        <a href="javascript:app_saveaddr();" class="btn_save"  style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">保存</a>
+                        <p class="txt_tip" style="text-align: center; transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">请确认无误后再保存</p>
+                        -->
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!--收货地址End-->

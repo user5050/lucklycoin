@@ -1,0 +1,25 @@
+ <!--收货地址BEGIN-->
+        <section id="sec_center_address_select" data-role="section">
+            <header>
+                <div class="titlebar">
+                    <a class="left"  data-toggle="back" href="#">
+                        <i class="icon icon-arrowleft"></i><span>返回</span>
+                    </a>
+                    <h1 class="text-center">选择收货地址</h1> 
+                </div>
+                
+            </header>
+            <article data-role="article" class="active" id="sec_center_address_select_art" data-scroll="pulldown" style="top: 44px; bottom: 10px;">
+
+        <div class="scroller">
+            <script type="text/html" src="page/part/template_empty_selectaddr.html" id="template_sec_center_selectaddress_empty"></script>
+            <input type="hidden" id="template_center_address_select_gameno" />
+            <div class="address_list">
+                <ul class="clearfix">
+                    <script type="text/html" src="page/part/template_center_address_select.html" id="template_sec_center_address_select"></script>
+                </ul>
+            </div> 
+        </div>
+    </article>
+        </section>
+        <!--收货地址End-->

@@ -1,0 +1,58 @@
+<section id="sec_compute" data-role="section" class="rule_sec">
+    <header>
+        <div class="titlebar">
+            <a class="left" data-toggle="back" href="#">
+                <i class="icon icon-arrowleft"></i><span>返回</span>
+            </a>
+            <h1 class="text-center">1元指数购说明</h1>
+        </div>
+    </header>
+    <article data-role="article" class="active" style="top: 44px; bottom: 0px;">
+        <div class="wrap_fixed">
+            <div class="rule_box">
+                <h2>1元指数购规则</h2>
+                <div class="rule_cont">
+                    <ul>
+                        <li><span class="num">1.</span>挑选喜欢的奖品：购买对应数量的号码(系统分配)； </li>
+                        <li><span class="num">2.</span>获得奖品：当所有号码都被分配完毕后，系统根据规则计算出1个幸运号码，持有该号码的用户，直接获得该奖品。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rule_box">
+                <h2>开奖时间规则</h2>
+                <div class="rule_cont">
+                    <ul>
+                        <li><span class="num txt_red"></span> 本系统所有计算数据完全依赖于股票价格，计算时间为股票交易日收盘后5分钟(为下午3:05分)；
+                        </li>
+                        <li><span class="num">1.</span> 下午2:55之<span style="color:red">前</span>分配完毕的奖品,将在最近的收盘日(包含今天)计算(如今天为股票交易日，则会在下午3:05分开奖)；<br/>
+                      
+                        </li>
+                        <li><span class="num">2.</span> 下午2:55之<span style="color:red">后</span>分配完毕的奖品,将在最近的收盘日(排除今天)计算(排除今天，在下一个股票交易日下午3:05分开奖) </li>
+                    <ul>
+                </div>
+                    <p class="txt_tip">注:因为系统计算数据完全依赖于股市，因此开奖时间一定是在股票交易日(下午3:05)，开奖的跨度稍长，但这都是为了绝对的公平。</p>
+            </div>
+
+
+            <div class="rule_box">
+                <h2>幸运号码计算规则</h2>
+                <div class="rule_cont">
+                    <ul>
+                        <li><span class="num txt_red"></span> 本系统所以计算数据完全依赖于股票价格，每期参与计算的股票代码都不同，股市收盘后5分钟根据股票收盘价计算；
+                        </li>
+                        <li><span class="num" style="color:red"></span> 算法: 取整(上证指数 * 股票1收盘价 *  股票2收盘价 * 股票3收盘价 * 100 ) % 总参与数  + 1000001
+                        </li>
+                        <li><span class="num">1.</span> 上证指数(000001) * 股票1收盘价 *  股票2收盘价 * 股票3收盘价 </li>
+                        <li><span class="num">2.</span> 为了结果更加离散，对第1步计算出的结果*100,<span style="color:red">舍弃掉小数部分</span>;
+                        </li>
+                        <li><span class="num">3.</span> 用第2步计算出的结果对该奖品总需人次求<span style="color:red">余数</span> + 原始数1000001，为最终幸运号码，拥有该幸运号码者，直接获得该奖品；</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </article>
+</section>

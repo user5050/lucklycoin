@@ -1,0 +1,18 @@
+<% for (i = 0; i < result.length; i ++) {%>
+    
+    <%if(result[i].isCanUse==1 ){%>
+    <li onclick="javascript:app_usecoupon('<%=result[i].couponid%>',<%=result[i].couponmoney%>,'<%=result[i].name%>')">
+    <%}else{%>
+    <li>
+    <%}%>
+        <div mode='user_coupon'  style="position:relative">
+            <img src="images/coupon/coupon.png" />
+            <p><%=result[i].name%>
+            <%if(result[i].isCanUse!=1){%> 
+                <span style='color:red'>无法使用</span>
+            <%}%>
+            </p>
+            <p><%=result[i].expiretime%></p>
+        </div>
+    </li>
+<%}%>

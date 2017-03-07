@@ -1,0 +1,43 @@
+<%if(result.pi){%>
+    <div id="giftDetail">
+        <div class="img_box">
+            <a href="javascript:void(0);">
+                <img data-source="<%=result.pi.img%>"  placeholder="images/product/default.jpg"  alt="">
+            </a>
+            <div class="lanren">
+                <div class="ribbon-lanren-green">
+                    <%
+                        var stateDesc= result.pi.state==1 ? "进行中": result.pi.state==2 ? "待揭晓": "已完成"; 
+                    %>
+                    <div class="ribbon-green"><%=stateDesc%></div>
+                </div>
+            </div>​
+        </div>
+        <div class="goods_info">
+            <h3>
+                <%=result.pi.name%>
+            </h3>
+            <div class="progress_box">
+                <p class="txt_progress">总需<span><%=result.pi.total%></span><span class="over">剩余<em id="template_detail_main_left"><%=(result.pi.total-result.pi.cur)%></em></span></p>
+                <div class="progress_bar"><span id="template_detail_main_percent" class="bar" style="width:<%=result.pi.cur/result.pi.total*100%>%"></span></div>
+                <div>
+                    <%
+                    var url="page/sec/sec_compute.html";
+                    if(result.pi.state !=1 && result.pi.state !=2){
+                        url="page/sec/sec_detail_compute.html?gno="+result.pi.gameno+"&pid="+result.pi.productid;
+                    } 
+                    %>
+                    <a href="<%=url%>" data-toggle="section" class="stock">参与计算的股票：<b><%for(var i=0;i<result.pi.stocks.length;i++){%> <%=result.pi.stocks[i].n%> <%}%></b>
+                    <a href="<%=url%>" data-toggle="section" style="font-size:10px;margin-left:5px">详情</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="goods_msg clearfix">
+        <a href="page/sec/sec_detail_desc.html?pid=<%=result.pi.productid%>" class="txt_msg item_page" data-toggle="section"><i class="ic_nav"></i>图文详情<span class="maintip">建议在WiFi环境下查看</span></a>
+        <a href="page/sec/sec_detail_history.html?pid=<%=result.pi.productid%>" class="txt_msg" data-toggle="section"><i class="ic_nav"></i>往期开奖</a>
+        <a href="page/sec/sec_detail_gameshow.html?pid=<%=result.pi.productid%>" class="txt_msg" data-toggle="section"><i class="ic_nav"></i>中奖晒单</a>
+    </div>
+    <%}%>

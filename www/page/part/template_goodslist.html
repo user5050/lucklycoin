@@ -1,0 +1,24 @@
+<% for (i = 0; i < result.length; i ++) { %>
+ 
+<li gametype="home" productId="<%=result[i].productid%>" ref="<%=result[i].gameno%>,<%=result[i].productid%>,<%=result[i].cur%>">
+        <div class="img_box">
+            <a href="page/sec/sec_product_detail.html?gno=<%=result[i].gameno%>&pid=<%=result[i].productid%>" data-toggle="section">
+                <img  data-source="<%=result[i].img%>"  placeholder="images/product/default.jpg"   alt="<%=result[i].name%>">
+            <!--data-source="<%=result[i].img%>"  placeholder="images/default.jpg" -->
+            </a>
+        </div>
+        <h3>
+            <a href="page/sec/sec_product_detail.html?gno=<%=result[i].gameno%>&pid=<%=result[i].productid%>" data-toggle="section">
+                <%=result[i].name%>
+            </a>
+        </h3>
+        <div class="rate_box rate_278">
+            <div class="progress_bar"><span class="bar" style="width:<%=result[i].cur/result[i].total*100%>%;"></span></div>
+            <div class="num_box">
+                <p class="item_num"><span class="txt_num" ><%=result[i].total%></span>总需</p>
+                <p class="item_num"><span class="txt_num" ><%=(result[i].total-result[i].cur)%></span>剩余</p>
+            </div>
+        </div>
+        <a href="javascript:app_buy('<%=result[i].gameno%>','<%=result[i].productid%>',<%=(result[i].total-result[i].cur)%>,'<%=result[i].img%>');"   class="btn_buy btn_common" ><span>夺宝</span></a>
+    </li>
+<%}%>

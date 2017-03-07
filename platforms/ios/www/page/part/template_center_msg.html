@@ -1,0 +1,38 @@
+ <%if(result){
+    for(var i=0; i< result.length ; i++)
+    {
+        // 0商品，1自定义路径,2网页内容
+        var t= result[i].jt;
+        var url=result[i].ju;
+        var sec = "";
+
+        if(url)
+        {
+            if (t == 0) {
+                sec = ("page/sec/sec_product_detail.html?pid=" + url);
+            }
+            else if (t == 1) {
+                sec = (url);
+            }
+            else {
+                sec = ("page/sec/sec_inner_html.html?url=" + url);
+            }
+        }
+    %>
+ <li style="position:relative">
+    <div>
+        <img src="images/coupon/coupon.png" />
+        <p style="padding-right:10px;"><%=result[i].content%></p>
+        <p><%=result[i].sendtime%></p>
+
+        <%if(sec){%>
+        <p style="position:absolute;bottom:10px;right:10px;">
+            <a   href="<%=sec%>" data-toggle="section"> 查看>> </a>
+        </p>
+        <%}%>
+    </div>
+</li>
+    <%
+    }
+    }
+ %>

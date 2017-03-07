@@ -1,0 +1,243 @@
+﻿<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: * 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Agile Lite</title>
+    <link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+    <link rel="stylesheet" href="assets/third/seedsui/plugin/seedsui/seedsui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div id="section_container">
+        <script type="text/html" src="page/part/template_goods_item.html" id="template_goods_item_g"></script>
+        <!--首页BEGIN-->
+        <section id="sec_index" data-role="section"  class="active  index_sec new_index">
+            <header>
+                <div class="top_bar">
+                    <h1 class="text-center 一元指数购" id="header_title"></h1>
+                    <a href="javascript:app_homeShare();" id="btn_share" class="home"></a>
+                </div>
+            </header>
+
+            <article id="art_goods" data-role="article" data-scroll="pulldown" class="active" style="top:44px;bottom:54px;">
+
+                <div class="scroller">
+ 
+                    <div id="home_banner">
+                        <ul class="html5zoo-slides" >
+                            <script id="template_banner" type="text/html" src="page/part/template_banner.html"></script>
+                        </ul>
+                    </div>
+
+                    <div class="goods_cont">
+                        <div class="goods_tab_wp">
+                            <div class="tab_cont">
+                                <div class="goods_column">
+                                    <ul class="igoods_list new_igoods_list clearfix" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+                                        <script id="template_productlist" type="text/html" src="page/part/template_goodslist.html"></script>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+            <article id="art_wait" data-role="article" style="top: 44px; bottom:54px;" data-scroll="pulldown">
+                <div class="scroller">
+
+                    <script type="text/html" src="page/part/template_empty.html" id="template_wait_empty"></script>
+
+                    <div class="goods_cont">
+                        <div class="goods_tab_wp">
+                            <div class="tab_cont">
+                                <div class="goods_column">
+                                    <ul class="igoods_list  new_igoods_list clearfix igoods_list_long" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);"
+                                        _init="1">
+                                        <script type="text/html" src="page/part/template_wait.html" id="template_wait"></script>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article id="art_show" data-role="article" data-scroll="pulldown" style="top: 44px;bottom:54px;">
+                <div class="scroller">
+
+                    <script type="text/html" src="page/part/template_empty.html" id="template_show_empty"></script>
+
+                    <div class="my_share_list">
+
+                        <script type="text/html" src="page/part/template_show.html" id="template_show"></script>
+
+                    </div>
+                </div>
+            </article>
+
+
+            <article id="art_center" data-role="article" style="top: 44px; bottom: 0px;">
+                <div class="scroller">
+                    <script type="text/html" src="page/part/template_center.html" id="template_center"></script>
+                </div>
+            </article>
+
+            <!--导航BEING-->
+
+            <footer>
+                <ul class="menubar">
+                    <li class="tab active" data-role="tab" href="#art_goods" data-toggle="article">
+                        <i class="icon icon-home-fill"></i>
+                        <label class="tab-label">商品</label>
+                    </li>
+                    <li class="tab" data-role="tab" href="#art_wait" data-toggle="article">
+                        <i class="icon icon-chattip"></i>
+                        <label class="tab-label">待揭晓</label>
+                    </li>
+                    <li class="tab" data-role="tab" href="#art_show" data-toggle="article">
+                        <i class="icon icon-contact"></i>
+                        <label class="tab-label">晒单</label>
+                    </li>
+                    <li class="tab" data-role="tab" href="#art_center" data-toggle="article">
+                        <i class="icon icon-app"></i>
+                        <label class="tab-label">我的</label>
+                    </li>
+                </ul>
+            </footer>
+            <!--导航End-->
+
+        </section>
+
+        <!--首页END-->
+
+        <!--Tools BEGIN-->
+        <div class="pop_area" id="oneShareBox" style="display: none">
+            <div class="share_box">
+                <p class="txt_share">分享到：<label id="lb_share_desc" class="red"></label></p>
+                <div class="share_list">
+                    <ul class="clearfix" class="grid size54" data-rowspace="8" data-col="3">
+                        
+                        <li>
+                            <a class="s_wechat" href="javascript:app_share_webchat(0,'')">微信好友</a>
+                        </li>
+
+                        <li>
+                            <a class="s_friends" href="javascript:app_share_webchat(1,'')">朋友圈</a>
+                        </li>
+
+                        <li>
+                            <a class="s_qq" href="javascript:app_share_qq(0,'')">QQ</a>
+                        </li>
+
+                        <li>
+                            <a class="s_qzone" href="javascript:app_share_qq(1,'')">QQ空间</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href=" javascript:app_hideTarget('oneShareBox');" class="btn_cancel">取消</a>
+            </div>
+        </div>
+
+
+        <div class="pop_area J_choosePanelDlg" id="detail_buy" style="display: none;">
+            <div class="choose_panel">
+                <div class="cp_tt">
+                    <div class="img_box">
+                        <img id="detail_buy_img" src="img/detail/m230x230.jpg" alt="">
+                    </div>
+                    <p>请选择参与人次</p>
+                </div>
+                <div class="cp_cont">
+                    <div class="up_down_choose">
+                        <a href="javascript:app_sub( 'detail_byCnt');" class="gd_down J_sub"></a>
+                        <input class="J_nums" id="detail_byCnt" value="10">
+                        <a href="javascript:app_add( 'detail_byCnt');" class="gd_up J_add"></a>
+                    </div>
+
+                    <div class="quick_choose qc2" style="">
+                        <a href="javascript:app_setValue( 'detail_byCnt',5);;">5</a>
+                        <a href="javascript:app_setValue( 'detail_byCnt',10);">10</a>
+                        <a href="javascript:app_setValue( 'detail_byCnt',15);">15</a>
+                        <a href="javascript:app_setValue( 'detail_byCnt', 'curleft');" class="J_all">包尾</a>
+                    </div>
+
+                    <p class="txt_total J_txt_total1" style="display: none;">共参与<em class="J_nums1"></em>夺宝币</p>
+                    <a id="detail_buy_confirm" href="javascript:app_tobuypage()" class="btn_confirm">确定</a>
+                    <p class="txt_total J_txt_total1">超出的购买数量自动计入下期</p>
+
+                </div>
+                <a href="javascript:app_hideTarget('detail_buy');" class="btn_close J_close"></a>
+            </div>
+        </div>
+
+        <div class="notice_box" style="display: none; top: 48px;">
+            <p class="txt_notice dblx_tip">亲，您有一张<em class="pzText">优惠券</em>即将过期</p>
+            <a href="http://1.xunlei.com/wap/pay.html?referfrom=y_wap_yydbgw_ggong_tk&amp;aidfrom=y_wap_yydbgw_push_noti_yhj
+                               " class="btn_notice J_data_mark Raider_noticcLink" paybtn="true" clickid="y_wap_yydbgw_push_noti_yhj
+                               " createtime="1477900552000" pageurl="http://1.xunlei.com/wap/i.html" pageid="dblxj_wap_shouye
+                               " referfrom="y_wap_yydbgw_ggong_ye" cookieid="ee98c14faa634ffbff46b75f3ffd23f2" eventtype="payclick
+                               " clickurl="pay.html?referfrom=y_wap_yydbgw_ggong_tk&amp;aidfrom=y_wap_yydbgw_push_noti_yhj">立即使用</a>
+        </div>
+
+        <div class="pop_area" id="oneComMsg" style="display: none">
+            <div class="pop_box big">
+                <p class="txt_pop" id="msgbox">官方QQ群</p>
+                <div class="btn_box">10003222 10003222 </div>
+                <div class="btn_box">
+                    <a href="javascript:;" class="btn_left msgbtn nojump" id="leftBtn" style="display: none">确认</a>
+                    <a href="javascript:;" class="btn_right msgbtn nojump" id="rightBtn" style="display: none">退出</a>
+                    <a href="javascript:;" class="btn_center msgbtn nojump" id="centerBtn">确定</a>
+                </div>
+            </div>
+        </div>
+        <!--Tools End-->
+
+    </div>
+
+
+    <!--- third -->
+    <script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+    <script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+    <script src="assets/third/iscroll/iscroll-probe.js"></script>
+    <script src="assets/third/arttemplate/template-native.js"></script>
+    <script src="assets/third/jquery/jquery.color.js"></script>
+
+    <!---  agile -->
+    <script type="text/javascript" src="assets/agile/js/agile.js"></script>
+    <script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+    <script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+    
+    <!-- app -->
+    <script type="text/javascript" src="assets/app/js/app.seedsui.js"></script>
+    <script type="text/javascript" src="assets/third/seedsui/plugin/seedsui/seedsui.min.js"></script>
+    <script type="text/javascript" src="js/detail.js"></script>
+
+    <!-- core -->
+    <script type="text/javascript" src="js/core/cfg.js"></script>
+    <script type="text/javascript" src="js/core/render.js"></script>
+    <script type="text/javascript" src="js/core/app.js"></script>
+    <script type="text/javascript" src="js/core/main.js"></script>
+    <script type="text/javascript" src="js/core/refresh.js"></script> 
+    <script type="text/javascript" src="js/core/push.js"></script> 
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/html5zoo.js"></script>
+    <script type="text/javascript" src="js/banner.js"></script>
+    <script type="text/javascript" src="js/share.js"></script>
+
+    <script type="text/javascript">
+        var curleft = 100;  
+    </script>
+ 
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!--消息列表BEGIN-->
+<section id="sec_center_login" data-role="section" class="index_sec new_index">
+    <header>
+        <div class="titlebar">
+            <a class="left" data-toggle="back" href="#">
+                <i class="icon icon-arrowleft"></i><span>返回</span>
+            </a>
+            <h1 class="text-center">登录</h1>
+            <a href="#sec_index" data-toggle="section">个人中心</a>
+        </div>
+    </header>
+
+    <article id="sec_center_login_art" data-role="article" class="active" style="top: 44px; bottom: 10px;">
+
+        <div class="input-box margin-top required" data-input="clear">
+            <input type="text" placeholder="常用手机号码" maxlength="11" id="sec_center_login_form_phone" />
+        </div>
+
+        <div class="input-box margin-top required" data-input="clear">
+            <input type="text" style="width:70%" placeholder="短信验证码" maxlength="4" id="sec_center_login_form_vcode" />
+            <button class="" id="sec_center_login_form_vcode_btn" onclick="javascript:app_sendsmsvcode()">点击获取</button>
+        </div>
+
+        <div id="sec_center_login_form_div_icode" class="margin-top required hide" style="border-color:#e7eabd;height: 40px; line-height: 40px; position: relative; background: white none repeat scroll 0% 0%;">
+            <input type="text" style="vertical-align: middle; float: left; width: 50%; border-color: white; line-height: 18px; height: 18px;"
+                placeholder="图片验证码" onchange="javascript:app_verifyicode()" maxlength="4" id="sec_center_login_form_icode" />
+            <span style="float:right"><img src="#" onclick="javascript:app_changeicode()"  width="80px" height="40px" id="sec_center_login_form_icode_img"/></span>
+        </div>
+
+        <div class="recieve_sec">
+            <a class="btn_save margin-top" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);" id="sec_center_login_form_btn"
+                onclick="javascript:app_login()">登 录</a>
+        </div>
+
+    </article>
+
+</section>
+<!--消息列表End-->

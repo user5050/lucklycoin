@@ -1,0 +1,22 @@
+<%if(result){
+    for(var i=0; i< result.length ; i++)
+    {
+    %>
+    <li>
+        <div style="position:relative">
+            <%if(result[i].state ==1){%>
+                <img src="images/coupon/coupon.png" />
+            <%}else if(result[i].state ==2){%>
+                <img src="images/coupon/coupon.png" />
+            <%}else{%>
+                <img src="images/coupon/coupon.png" />
+            <%}%>
+            
+            <p><%=result[i].name%></p>
+            <p><%=result[i].expiretime%></p>
+        </div>
+    </li>
+    <%
+    }
+    }
+ %>

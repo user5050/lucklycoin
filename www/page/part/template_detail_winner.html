@@ -1,0 +1,17 @@
+<%if(result.pw){%>
+    <div class="join_box join_box_win">
+        <div class="join_tt join_tt_win">
+            <p class="txt_tt">抢宝成功者 <a href="page/sec/sec_detail_compute.html?gno=<%=result.pw.gn%>" data-toggle="section" style="font-size:10px">查看计算详情</a></p>
+        </div>
+        <div class="join_feed">
+            <img  data-source="<%=result.pw.h%>" placeholder="images/head/default.jpg" alt="头像">
+            <div class="join_info" style="padding-top:19px">
+                <p class="txt_name"><%=result.pw.n %></p>
+                <p class="txt_ps2">幸运号码：<%=result.pw.wn %></p>
+                <p class="txt_join">本期参与：<em><%=result.pw.a %></em>人次</p>
+                <p class="txt_ps">揭晓时间： <%=result.pw.t %></p>
+            </div>
+        </div>
+
+    </div>
+    <%}%>

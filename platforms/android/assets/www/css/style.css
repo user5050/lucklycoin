@@ -1,0 +1,412 @@
+.antherimg, .pay_btn a, address, article, aside, footer, header, menu, nav, section {
+    display: block;
+}
+
+a, address, article, aside, body, button, cite, dd, del, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, img, input, legend, li, menu, nav, ol, p, section, span, textarea, ul {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+mark {
+    background-color: transparent;
+    color: inherit;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    text-align: left;
+    font: 20px/1.5 Helvetica,Tahoma,Arial,\534E\6587\7EC6\9ED1,\5FAE\8F6F\96C5\9ED1,sans-serif;
+    color: #000;
+    overflow-x: hidden;
+    background: #eff4f8;
+}
+
+.other_login, .other_login2, .other_login_wp .tit, .pay_btn a, .verify_btn {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #1084fb;
+    outline: 0;
+}
+
+    a:active {
+        color: #0068d2;
+    }
+
+a, button, button:active {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tb_wpb h3 {
+    font-size: 1.11rem;
+}
+
+.color_red {
+    color: red;
+}
+
+.form_logoin p.in_box_cite {
+    font-size: .9rem;
+    margin-bottom: .2rem;
+}
+
+.form_logoin .in_box label {
+    color: #999;
+    font-size: 1.11rem;
+    position: absolute;
+    top: 0;
+    left: 1.41rem;
+    height: 3.33rem;
+    line-height: 3.33rem;
+}
+
+.form_logoin .in_box .cbox {
+    top: 0;
+    left: 0;
+    font-size: .9rem;
+}
+
+.chk {
+    vertical-align: middle;
+    margin-right: .74rem;
+}
+
+.form_logoin .in_box .in_txt {
+    padding: 1.11rem 5%;
+    width: 100%;
+    height: 3.33rem;
+    color: #333;
+    font-size: 1.11rem;
+    line-height: 1;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #c8c8c8;
+}
+
+#al_c_div, #mr_c_div, .in_box {
+    position: relative;
+    margin-top:25px;
+}
+
+.in_boxa {
+    background: 0 0;
+    border: none;
+    box-shadow: none;
+}
+
+.verify_img {
+    width: 31.33%;
+    height: 3rem;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+
+    .verify_img img {
+        width: 100%;
+        height: 100%;
+    }
+
+.in_boxa .text_cite {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: .89rem;
+    height: 3.33rem;
+    line-height: 3.33rem;
+}
+
+.cbox, .pay_b_logo .text_cite {
+    font-size: .9rem;
+}
+
+.pay_btn a {
+    background: #1084fb;
+    font-size: 1.2rem;
+    color: #fff;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 3px;
+}
+
+    .pay_btn a:active {
+        background: #0068d2;
+    }
+
+.antherimg {
+    font-size: .9rem;
+    margin-top: 1rem;
+    vertical-align: top;
+}
+
+.hd {
+    margin-bottom: 1.11rem;
+}
+
+#login_box h3 a, #register_box h3 a {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    height: 2.96em;
+    line-height: 2.96em;
+    background-color: #fff;
+    color: #0e88de;
+}
+
+    #login_box h3 a:after, #register_box h3 a:after {
+        display: none;
+        content: "";
+        position: absolute;
+        left: 11.25%;
+        bottom: 0;
+        width: 78.125%;
+        height: 2px;
+        /*background: #1084fb;*/
+    }
+
+    #login_box h3 a.on:after, #register_box h3 a.on:after {
+        display: block;
+    }
+
+.bd {
+    margin: 0 .74rem;
+    min-height: 26rem;
+}
+
+#mail_register .pay_btn {
+    padding-top: 1rem;
+}
+
+.pay_btn {
+    margin-top: 3rem;
+}
+
+.ty_tips em {
+    color: #1e68b3;
+    margin: 0 .5rem;
+}
+
+#mobile_register .in_boxa {
+    box-shadow: inset 0 4px 3px #dfdfdf;
+}
+
+#mobile_register .pay_btn, #mobile_register2 .pay_btn {
+    margin-top: 2rem;
+}
+
+.verify_btn {
+    line-height: 2.11rem;
+    position: absolute;
+    top: 50%;
+    right: 1.07rem;
+    padding: 0 .5rem;
+    font-size: .9rem;
+    height: 2.11rem;
+    min-width: 5.96rem;
+    border: 1px solid #1084fb;
+    border-radius: .18rem;
+    margin-top: -1.1rem;
+}
+
+    .verify_btn:active {
+        background: #1084fb;
+        color: #fff;
+    }
+
+.verify_btn_off {
+    border-color: #fff;
+    color: #999;
+}
+
+#mobile_register2 .in_ttext {
+    color: red;
+    font-size: .9rem;
+    margin-top: .5rem;
+}
+
+#turnLoginDiv, #turnRegisterDiv {
+    position: relative;
+    height: 3.33rem;
+    line-height: 3.33rem;
+    margin: 0 .74rem;
+}
+
+    #turnLoginDiv p, #turnRegister {
+        position: absolute;
+        right: 0;
+        font-size: .89rem;
+        top: 0;
+    }
+
+#mobile_login .in_boxa:first-child {
+    border: 1px solid #c8c8c8;
+}
+
+#pl_c {
+    width: 65%;
+}
+
+#pl_c_div p {
+    padding: 1.11rem 0 1.63rem;
+    color: #999;
+    font-size: .89rem !important;
+}
+
+.form_logoin .in_boxa:first {
+    border-bottom: 1px solid #ccc;
+}
+
+.in_box_cite + .in_box {
+    position: relative;
+    top: 1px;
+}
+
+.other_login_wp {
+    position: absolute;
+    left: 0;
+    bottom: 1.85rem;
+    width: 100%;
+    display: none;
+}
+
+    .other_login_wp .tit {
+        position: relative;
+        display: block;
+        margin-bottom: 1.26rem;
+        font-size: .89rem;
+        color: #666;
+    }
+
+        .other_login_wp .tit:after, .other_login_wp .tit:before {
+            content: "";
+            top: 50%;
+            position: absolute;
+            width: 29%;
+            height: 1px;
+            background: #999;
+        }
+
+        .other_login_wp .tit:before {
+            left: 3.125%;
+        }
+
+        .other_login_wp .tit:after {
+            right: 3.125%;
+        }
+
+.other_login .login_img {
+    position: relative;
+    display: inline-block;
+    margin: 0 .93rem;
+    width: 3.185rem;
+    height: 3.185rem;
+    overflow: hidden;
+    line-height: 30;
+    vertical-align: top;
+}
+
+    .other_login .login_img img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+.other_login2 {
+    margin-top: 1.74rem;
+}
+
+    .other_login2 .login_link {
+        color: #999;
+        font-size: .89rem;
+    }
+
+        .other_login2 .login_link:active {
+            color: #0068d2;
+        }
+
+.other_login_wp .d_line {
+    margin: 0 1.11rem;
+    color: #999;
+}
+
+.input_area {
+    position: relative;
+    z-index: 10;
+    background: #eff4f8;
+}
+
+@media only screen and (min-width:720px) and (max-width:800px) {
+    body {
+        font-size: 33px;
+    }
+}
+
+@media only screen and (min-width:641px) and (max-width:720px) {
+    body {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-device-width:640px),only screen and (max-width:640px) {
+    body {
+        font-size: 27px;
+    }
+}
+
+@media only screen and (max-device-width:540px),only screen and (max-width:540px) {
+    body {
+        font-size: 22.5px;
+    }
+}
+
+@media only screen and (max-device-width:480px),only screen and (max-width:480px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-device-width:414px),only screen and (max-width:414px) {
+    body {
+        font-size: 17.25px;
+    }
+}
+
+@media only screen and (max-device-width:375px),only screen and (max-width:375px) {
+    body {
+        font-size: 15.63px;
+    }
+}
+
+@media only screen and (max-device-width:320px),only screen and (max-width:320px) {
+    body {
+        font-size: 11px;
+    }
+
+    .other_login_wp {
+        bottom: 1rem;
+    }
+}

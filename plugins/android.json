@@ -1,0 +1,62 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-wechat": {
+            "WECHATAPPID": "wx7c67eca9b231a6f0",
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-offbye-alipay": {
+            "PARTNER_ID": "2088021125505184",
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "jpush-phonegap-plugin": {
+            "API_KEY": "d08f28365258291fba32659c",
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-qqsdk": {
+            "QQ_APP_ID": "YOUR_QQ_APPID",
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.fireword.onecoin"
+        }
+    }
+}
